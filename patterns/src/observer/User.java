@@ -16,10 +16,18 @@ public class User {
     private UserStatus status;
 
     public void createPrint(Print print) {
-        poolList.get(1).addPrint(print);
+        poolList.get(1).addPrint(this, print);
     }
 
     public UserStatus getStatus() {
         return status;
+    }
+
+    public double getAccount() {
+        return account;
+    }
+
+    public void setAccount(double account) {
+        this.account = account;
     }
 }
